@@ -1,0 +1,25 @@
+---
+- name: Create users
+  hosts: all
+  become: yes
+
+  vars:
+    users:
+      - name: alice
+        uid: 1001
+        groups:
+          - sudo
+          - www-data
+      - name: bob
+        uid: 1002
+        groups:
+          - sudo
+
+  tasks:
+    - name: Create users
+      user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        groups: "{{ item.groups }}"
+        shell: /bin/bash
+      with_items: "{{ users }}"
