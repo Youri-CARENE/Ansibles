@@ -15,3 +15,4 @@ Explorer les modules Ansible : Ansible fournit un grand nombre de modules que vo
 Rejoignez la communauté Ansible : Ansible dispose d’une communauté importante et active d’utilisateurs et de contributeurs. Rejoindre la communauté peut vous aider à apprendre des autres et à obtenir de l’aide lorsque vous en avez besoin.
 
 En suivant ces étapes, vous pouvez démarrer avec Ansible et commencer à automatiser votre infrastructure informatique.
+
