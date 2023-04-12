@@ -1,0 +1,13 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Create user
+      user:
+        name: "{{ item }}"
+        state: present
+        shell: /bin/bash
+      with_items:
+        - user1
+        - user2
+        - user3
+        - user4
