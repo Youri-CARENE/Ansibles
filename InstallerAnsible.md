@@ -1,15 +1,23 @@
 Pour installer Ansible sur Ubuntu Linux, vous pouvez suivre ces étapes:
 
-Mettre à jour le gestionnaire de paquets : Ouvrez un terminal et exécutez la commande suivante pour mettre à jour le gestionnaire de paquets :
+1. Mettre à jour le gestionnaire de paquets : Ouvrez un terminal et exécutez la commande suivante pour mettre à jour le gestionnaire de paquets :
 
-sudo apt mise à jour
+
+ ```sudo apt update```
+
+
+
 
 Installer Ansible : exécutez la commande suivante pour installer Ansible :
-sudo apt installer ansible
+
+```sudo apt install ansible```
+
+
 
 Vérifiez l’installation : une fois l’installation terminée, exécutez la commande suivante pour vérifier la version d’Ansible installée :
+```ansible --version```
+ 
 
-ansible --version
 
 Si l’installation a réussi, vous devriez voir la version d’Ansible installée.
 
