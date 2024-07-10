@@ -1,0 +1,1 @@
+Un dossier spécifique pour mes playbooks Ansible. Cela permet de séparer clairement les fichiers de configuration des autres éléments du projet
