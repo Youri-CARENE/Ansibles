@@ -1,0 +1,9 @@
+---
+- name: Playbook principal
+  hosts: all
+  become: true
+  tasks:
+    - name: Inclure la configuration du serveur web
+      include_tasks: webserver.yml
+    - name: Inclure la configuration de la base de données
+      include_tasks: database.yml
