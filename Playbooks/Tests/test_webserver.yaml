@@ -1,0 +1,39 @@
+---
+- name: Test de configuration du serveur web
+  hosts: localhost
+  tasks:
+    - name: Vérifier la mise à jour du cache apt
+      command: apt-get update
+      register: apt_update
+
+    - name: Vérifier l'installation de Nginx
+      command: dpkg -l | grep nginx
+      register: nginx_installed
+
+    - name: Vérifier que Nginx est démarré et activé
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+      register: nginx_status
+
+    - name: Vérifier la présence du fichier de configuration Nginx
+      stat:
+        path: /etc/nginx/nginx.conf
+      register: nginx_config
+
+    - name: Afficher le résultat de la mise à jour du cache apt
+      debug:
+        var: apt_update
+
+    - name: Afficher le résultat de l'installation de Nginx
+      debug:
+        var: nginx_installed
+
+    - name: Afficher le statut de Nginx
+      debug:
+        var: nginx_status
+
+    - name: Afficher le statut du fichier de configuration Nginx
+      debug:
+        var: nginx_config
