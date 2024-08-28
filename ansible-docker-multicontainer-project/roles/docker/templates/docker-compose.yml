@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  ubuntu:
+    image: ubuntu:latest
+    container_name: ubuntu_container
+    command: sleep infinity
+
+  alpine:
+    image: alpine:latest
+    container_name: alpine_container
+    command: sleep infinity
+
+  centos:
+    image: centos:latest
+    container_name: centos_container
+    command: sleep infinity
+
+  debian:
+    image: debian:latest
+    container_name: debian_container
+    command: sleep infinity
+
+  fedora:
+    image: fedora:latest
+    container_name: fedora_container
+    command: sleep infinity
+
+  archlinux:
+    image: archlinux:latest
+    container_name: archlinux_container
+    command: sleep infinity
+
+  opensuse:
+    image: opensuse/leap:latest
+    container_name: opensuse_container
+    command: sleep infinity
+
+  oraclelinux:
+    image: oraclelinux:latest
+    container_name: oraclelinux_container
+    command: sleep infinity
+
+  freebsd:
+    image: freebsd:latest
+    container_name: freebsd_container
+    command: sleep infinity
+
+  busybox:
+    image: busybox:latest
+    container_name: busybox_container
+    command: sleep infinity
