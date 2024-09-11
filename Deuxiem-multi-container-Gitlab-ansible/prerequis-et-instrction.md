@@ -1,15 +1,18 @@
-Prérequis
-GitLab : Avoir un dépôt GitLab pour stocker le code.
-Docker : Installer Docker pour exécuter les conteneurs.
-Ansible : Installer Ansible pour orchestrer les tâches.
-Python : Ansible dépend de Python.
-SSH : Ansible nécessite SSH pour se connecter aux serveurs (dans ce cas, à la machine hôte où Docker est exécuté).
+# Prérequis et Instructions pour un Projet Multi-Container avec Ansible
 
+## Prérequis
 
-Explication des fichiers
-ansible/ansible.cfg : Fichier de configuration pour Ansible.
-ansible/inventory.yml : Liste des hôtes (ici, local).
-ansible/playbooks/ : Contient les playbooks Ansible pour le déploiement de l'application web et de la base de données.
-docker-compose.yml : Pour orchestrer le déploiement multi-container.
-.gitlab-ci.yml : Pipeline CI/CD de GitLab pour l'intégration continue.
-README.md : Instructions pour configurer et lancer l'application avec Ansible.
+- **GitLab** : Avoir un dépôt GitLab pour stocker le code.
+- **Docker** : Installer Docker pour exécuter les conteneurs.
+- **Ansible** : Installer Ansible pour orchestrer les tâches.
+- **Python** : Ansible dépend de Python pour fonctionner.
+- **SSH** : Ansible nécessite une connexion SSH pour se connecter aux serveurs (ici, la machine hôte où Docker est exécuté).
+
+## Explication des fichiers
+
+- **ansible/ansible.cfg** : Fichier de configuration pour Ansible.
+- **ansible/inventory.yml** : Liste des hôtes (dans ce projet, l'hôte local).
+- **ansible/playbooks/** : Contient les playbooks Ansible pour le déploiement des différents services, comme l'application web et la base de données.
+- **docker-compose.yml** : Fichier Docker Compose pour orchestrer le déploiement multi-container.
+- **.gitlab-ci.yml** : Pipeline CI/CD pour GitLab, afin d'automatiser les étapes d'intégration continue et de déploiement.
+- **README.md** : Instructions pour configurer et lancer l'application avec Ansible.
