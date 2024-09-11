@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+    - name: Déployer la base de données
+      docker_container:
+        name: db
+        image: postgres:13
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: testdb
+        ports:
+          - "5432:5432"
