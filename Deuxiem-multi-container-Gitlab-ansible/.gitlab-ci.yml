@@ -1,0 +1,19 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - ansible-playbook ansible/playbooks/deploy.yml --check
+  tags:
+    - ansible
+
+deploy:
+  stage: deploy
+  script:
+    - ansible-playbook ansible/playbooks/deploy.yml
+  only:
+    - master
+  tags:
+    - ansible
