@@ -1,6 +1,7 @@
-# Kubernetes et Ansibles Projects
+# Kubernetes ansible 
 
-Bienvenue dans le répo GitHub pour mes projets Ansibles. Ce répo contient divers fichiers et scripts pour aider à la gestion et au déploiement des conteneurs et des clusters Kubernetes, ainsi que des configurations Ansible.
+
+Ce répo contient divers fichiers et scripts pour aider à la gestion et au déploiement des conteneurs et des clusters Kubernetes, ainsi que des configurations Ansible.
 
 ## Structure du Répertoire
 
@@ -8,7 +9,8 @@ Bienvenue dans le répo GitHub pour mes projets Ansibles. Ce répo contient dive
 
 - **Installation.md** : Guide d'installation pour Kubernetes.
 
-### Répertoire: `Ansibles/Mini_Projet_Docker`
+### Répertoire:
+ `Ansibles/Mini_Projet_Docker`
 
 Ce répertoire contient un mini-projet Docker utilisant Ansible. Voici les fichiers inclus :
 
@@ -19,7 +21,9 @@ Ce répertoire contient un mini-projet Docker utilisant Ansible. Voici les fichi
 - **Launch_all.sh** : Script shell pour lancer tous les services nécessaires.
 - **requirements.txt** : Fichier listant les dépendances nécessaires pour le projet.
 
-### Répertoire: `Ansibles/Wast`
+### Répertoire: 
+
+`Ansibles/Wast`
 
 Ce répertoire semble être utilisé pour des tests ou des fichiers temporaires.
 
