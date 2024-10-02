@@ -1,5 +1,0 @@
----
-- hosts: localhost
-  tasks:
-    - include_tasks: web.yml
-    - include_tasks: db.yml
