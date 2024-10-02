@@ -1,6 +1,6 @@
 # Guide d'Installation d'Ansible
 
-Ce guide vous expliquera comment installer Ansible sur votre système, afin que vous puissiez commencer à l'utiliser pour automatiser vos tâches.
+Comment installer Ansible sur votre système, afin que vous puissiez commencer à l'utiliser pour automatiser vos tâches.
 
 ## Installation sur Ubuntu/Debian
 1. **Mettre à jour le gestionnaire de paquets** :
