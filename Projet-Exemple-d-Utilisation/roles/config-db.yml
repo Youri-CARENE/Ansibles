@@ -1,0 +1,6 @@
+---
+- name: Configurer une base de données
+  hosts: dbservers
+  become: yes
+  roles:
+    - db-server

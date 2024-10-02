@@ -1,0 +1,6 @@
+---
+- name: Déployer un serveur web
+  hosts: webservers
+  become: yes
+  roles:
+    - web-server
