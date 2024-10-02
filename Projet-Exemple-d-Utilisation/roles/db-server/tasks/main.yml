@@ -1,0 +1,18 @@
+---
+# Tâches pour le rôle db-server
+
+- name: Installer MySQL
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+- name: Démarrer MySQL
+  service:
+    name: mysql
+    state: started
+
+- name: Créer une base de données
+  mysql_db:
+    name: exemple_db
+    state: present

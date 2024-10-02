@@ -1,4 +1,4 @@
 ---
-# Variables pour le rôle db-server
+# Variables pour le rôle web-server
 
-mysql_root_password: exemple_password
+http_port: 80

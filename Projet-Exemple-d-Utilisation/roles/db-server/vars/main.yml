@@ -1,0 +1,4 @@
+---
+# Variables pour le rôle db-server
+
+mysql_root_password: exemple_password

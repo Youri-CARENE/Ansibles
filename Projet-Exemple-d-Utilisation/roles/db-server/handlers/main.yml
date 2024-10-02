@@ -1,0 +1,7 @@
+---
+# Handlers pour le rôle db-server
+
+- name: Redémarrer MySQL
+  service:
+    name: mysql
+    state: restarted
