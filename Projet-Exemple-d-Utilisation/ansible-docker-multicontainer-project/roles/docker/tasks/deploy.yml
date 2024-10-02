@@ -1,9 +1,0 @@
-- name: Déployer les conteneurs Docker
-  template:
-    src: docker-compose.yml.j2
-    dest: /opt/docker-compose.yml
-  tags: deploy
-
-- name: Lancer les conteneurs Docker avec docker-compose
-  command: docker-compose -f /opt/docker-compose.yml up -d
-  tags: deploy

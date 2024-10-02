@@ -1,9 +1,0 @@
-[webservers]
-webserver1 ansible_host=ip_de_votre_serveur_web
-
-[databases]
-database1 ansible_host=ip_de_votre_base_de_donnees
-
-
-[local]
-localhost ansible_connection=local

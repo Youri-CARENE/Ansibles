@@ -1,0 +1,4 @@
+---
+# Variables pour le rôle web-server
+
+http_port: 80

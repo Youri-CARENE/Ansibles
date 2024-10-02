@@ -1,8 +1,0 @@
-- hosts: localhost
-  tasks:
-    - name: Déployer l'application web
-      docker_container:
-        name: web
-        image: nginx:alpine
-        ports:
-          - "8080:80"
