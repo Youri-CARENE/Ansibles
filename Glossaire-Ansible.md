@@ -4,6 +4,7 @@
 - **Explication** : Un **Playbook** est un fichier YAML où tu décris les tâches que tu veux qu'Ansible exécute sur tes serveurs. Il contient une série de "plays" qui définissent ce qu'Ansible doit faire.
 - **Exemple** : Si tu veux installer Nginx sur plusieurs serveurs, tu écris les instructions dans un **Playbook**.
   - **Commande** : `ansible-playbook <playbook.yml>`
+#add
 
 ## 2. Task
 - **Explication** : Une **Task** est une action unique dans un playbook, comme installer un paquet ou modifier un fichier. Plusieurs tâches sont exécutées séquentiellement dans un playbook.
