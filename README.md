@@ -42,10 +42,3 @@ Pour installer et configurer les projets, suivez les étapes détaillées dans `
 3. **Gérer les Conteneurs** : Utilisez `Conteneurs_Cibles.sh` pour cibler et gérer des conteneurs spécifiques.
 4. **Ansible Playbooks** : Utilisez les playbooks comme `create_users.yml` pour gérer la configuration et les utilisateurs à l'intérieur des conteneurs.
 
-### Répertoire Wast
-
-Le répertoire `Wast` peut être utilisé pour stocker des fichiers temporaires ou des scripts en cours de développement.
-
-## Contribuer
-
-Les contributions sont les bienvenues ! Veuillez créer une branche pour votre fonctionnalité ou votre correctif et soumettre une pull request pour examen.
