@@ -1,6 +1,14 @@
+
 ---
-- name: Déployer un serveur web
-  hosts: webservers
-  become: yes
+# Playbook pour déployer un serveur web Apache sur les serveurs du groupe webservers.
+
+- name: Déployer un serveur web Apache sur les serveurs web
+  hosts: webservers  # Groupe défini dans le fichier d'inventaire (hosts)
+  become: yes  # Nécessaire pour exécuter des tâches avec des privilèges root
+
   roles:
-    - web-server
+    - web-server  # Rôle pour l'installation et la configuration d'Apache
+
+  # Ce playbook exécutera les tâches définies dans le rôle "web-server" sur les hôtes du groupe "webservers".
+  # Assurez-vous que le rôle web-server est bien configuré dans le dossier "roles/web-server" et
+  # contient toutes les tâches nécessaires pour installer et configurer Apache.
