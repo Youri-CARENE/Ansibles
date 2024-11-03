@@ -1,7 +1,18 @@
-[webservers]
-web1.example.com
-web2.example.com
 
+# Fichier d'inventaire pour Ansible
+
+# Groupe des serveurs web
+# Remplacez chaque exemple ci-dessous par l'adresse IP ou le nom de domaine de votre serveur web.
+# Vous pouvez trouver l'adresse IP de chaque machine cible en exécutant `ip a` ou `ifconfig` sur cette machine.
+[webservers]
+web1.example.com  # Exemple: 192.168.1.10 pour votre serveur web principal
+web2.example.com  # Exemple: 192.168.1.11 pour un second serveur web, si nécessaire
+
+# Groupe des serveurs de base de données
+# Remplacez chaque exemple ci-dessous par l'adresse IP ou le nom de domaine de votre serveur de base de données.
 [dbservers]
-db1.example.com
-db2.example.com
+db1.example.com  # Exemple: 192.168.1.20 pour votre serveur de base de données principal
+db2.example.com  # Exemple: 192.168.1.21 pour un second serveur de base de données, si nécessaire
+
+# Vous pouvez également définir des variables spécifiques pour chaque groupe ou hôte en ajoutant des lignes comme:
+# db1.example.com ansible_user=your_user ansible_port=your_ssh_port
