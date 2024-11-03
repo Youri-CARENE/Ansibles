@@ -1,6 +1,14 @@
+
 ---
-- name: Configurer une base de données
-  hosts: dbservers
-  become: yes
+# Playbook pour configurer une base de données sur les serveurs du groupe dbservers.
+
+- name: Configurer une base de données MySQL sur les serveurs de base de données
+  hosts: dbservers  # Groupe défini dans le fichier d'inventaire (hosts)
+  become: yes  # Nécessaire pour exécuter des tâches avec des privilèges root
+
   roles:
-    - db-server
+    - db-server  # Rôle pour la configuration de MySQL
+
+  # Ce playbook exécutera les tâches définies dans le rôle "db-server" sur les hôtes du groupe "dbservers".
+  # Assurez-vous que le rôle db-server est bien configuré dans le dossier "roles/db-server" et
+  # contient toutes les tâches nécessaires pour installer et configurer MySQL.
