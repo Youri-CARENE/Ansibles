@@ -117,3 +117,95 @@ ansible-playbook playbook.yml -v
 ansible-vault create secret.yml
 ansible-vault edit secret.yml
 ansible-playbook playbook.yml --ask-vault-pass
+
+
+
+## 7. Boucles et Conditions
+Les boucles et les conditions permettent d'exécuter des tâches de manière répétée ou conditionnelle.
+
+### Boucles
+Les boucles permettent de répéter une tâche plusieurs fois avec des valeurs différentes.
+
+**Exemple :**
+```yaml
+- name: Installer plusieurs paquets
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - curl
+    - vim
+```
+
+### Conditions
+Les conditions permettent d'exécuter des tâches seulement si certaines conditions sont remplies.
+
+**Exemple :**
+```yaml
+- name: Redémarrer le service nginx si la version est 2.0
+  service:
+    name: nginx
+    state: restarted
+  when: ansible_facts['nginx_version'] == "2.0"
+```
+
+## 8. Templates
+Les templates utilisent le moteur de templating Jinja2 pour générer des fichiers de configuration dynamiques, ce qui est particulièrement utile pour personnaliser des configurations.
+
+**Exemple :**
+```yaml
+- name: Copier le fichier de configuration
+  template:
+    src: /templates/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: Redémarrer nginx
+```
+
+## 9. Filtres
+Les filtres sont utilisés pour manipuler les données (variables) dans Ansible, notamment pour formater ou transformer des valeurs.
+
+**Exemple d'utilisation de filtre :**
+```yaml
+- name: Afficher la date formatée
+  debug:
+    msg: "La date actuelle est {{ ansible_date_time.date | replace('-', '/') }}"
+```
+
+## 10. Gestion des erreurs
+La gestion des erreurs est essentielle pour contrôler le comportement en cas d'échec d'une tâche. Ansible permet d'ignorer ou de personnaliser le comportement en cas d'échec avec `ignore_errors` et `failed_when`.
+
+**Exemple :**
+```yaml
+- name: Exécuter une commande avec gestion d'erreur
+  command: /bin/false
+  ignore_errors: yes
+```
+
+## 11. Tags
+Les tags permettent de filtrer les tâches à exécuter. C’est pratique pour n’exécuter qu'une partie d’un playbook.
+
+**Exemple d'utilisation de tags :**
+```yaml
+- name: Installer Nginx
+  apt:
+    name: nginx
+    state: present
+  tags: nginx_installation
+```
+
+## 12. Ansible Galaxy
+Ansible Galaxy permet de télécharger et de partager des rôles Ansible. Cela facilite l'importation de rôles préconfigurés pour des tâches courantes.
+
+**Exemple de commande :**
+```bash
+ansible-galaxy install geerlingguy.nginx
+```
+
+## 13. Ansible Vault
+Ansible Vault permet de chiffrer des données sensibles comme des mots de passe, garantissant ainsi la sécurité des informations confidentielles.
+
+**Exemple de chiffrement :**
+```bash
+ansible-vault encrypt fichier_secrets.yml
+```
