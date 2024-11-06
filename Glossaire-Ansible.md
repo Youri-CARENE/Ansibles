@@ -6,6 +6,10 @@
   - **Commande** : `ansible-playbook <playbook.yml>`
 #add
 
+
+
+
+
 ## 2. Task
 - **Explication** : Une **Task** est une action unique dans un playbook, comme installer un paquet ou modifier un fichier. Plusieurs tâches sont exécutées séquentiellement dans un playbook.
 - **Exemple** : Une tâche pour installer `nginx` sur un serveur :
