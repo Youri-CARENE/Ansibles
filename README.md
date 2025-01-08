@@ -3,6 +3,10 @@
 
 Ce répo contient divers fichiers et scripts pour aider à la gestion et au déploiement des conteneurs et des clusters Kubernetes, ainsi que des configurations Ansible.
 
+
+être nop
+
+
 ## Structure du Répertoire
 
 ### Racine du Répertoire
